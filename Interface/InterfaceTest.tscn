@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://rl26bc77fopi"]
+
+[ext_resource type="Script" uid="uid://cc2mt3wmaavxo" path="res://Script/Interface/InterfaceScript.gd" id="1_k55jh"]
+[ext_resource type="Script" uid="uid://n5vl8qn8gkrs" path="res://Script/music_upload.gd" id="2_esfv5"]
+[ext_resource type="AudioStream" uid="uid://b8m0ljoydpf8j" path="res://Audio/INI NAH & DUB - JAH MARNYAH (AMOUL-BAYI RECORDS 12).mp3" id="3_n7prv"]
+
+[node name="Control" type="CanvasLayer" unique_id=1549431928]
+
+[node name="Control" type="Control" parent="." unique_id=7048622]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_k55jh")
+
+[node name="FileDialog" type="FileDialog" parent="Control" unique_id=287862218]
+oversampling_override = 1.0
+title = "Open a File or Directory"
+initial_position = 2
+file_mode = 3
+display_mode = 1
+access = 2
+script = ExtResource("2_esfv5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1473777461]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 445.5
+offset_top = 271.0
+offset_right = 666.5
+offset_bottom = 337.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control/VBoxContainer" unique_id=1482493483]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Load Some Dirty Dub music"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1782230948]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=1444868199]
+layout_mode = 2
+text = "Play
+"
+
+[node name="Name" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=756748216]
+layout_mode = 2
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1875181074]
+stream = ExtResource("3_n7prv")
+bus = &"Test"
+
+[connection signal="file_selected" from="Control/FileDialog" to="Control" method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="Control/VBoxContainer/Button" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Play" to="Control" method="_on_play_pressed"]

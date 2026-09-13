@@ -14,6 +14,10 @@ config/name="CrashBarriere"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bw87442uh4h0k"
+
 [display]
 
 window/subwindows/embed_subwindows=false

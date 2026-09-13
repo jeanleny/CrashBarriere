@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://t5avh54cvcwv"]
+
+[ext_resource type="PackedScene" uid="uid://rl26bc77fopi" path="res://Interface/InterfaceTest.tscn" id="1_px8gx"]
+
+[node name="MainScene" type="Node2D" unique_id=500652094]
+
+[node name="Control" parent="." unique_id=1549431928 instance=ExtResource("1_px8gx")]
+metadata/_edit_use_anchors_ = true
