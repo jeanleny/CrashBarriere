@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cc2mt3wmaavxo" path="res://Script/Interface/InterfaceScript.gd" id="1_k55jh"]
 [ext_resource type="Script" uid="uid://n5vl8qn8gkrs" path="res://Script/music_upload.gd" id="2_esfv5"]
-[ext_resource type="AudioStream" uid="uid://b8m0ljoydpf8j" path="res://Audio/INI NAH & DUB - JAH MARNYAH (AMOUL-BAYI RECORDS 12).mp3" id="3_n7prv"]
 
 [node name="Control" type="CanvasLayer" unique_id=1549431928]
 
@@ -52,9 +51,8 @@ text = "Play
 [node name="Name" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=756748216]
 layout_mode = 2
 
-[node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1875181074]
-stream = ExtResource("3_n7prv")
-bus = &"High"
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1527745590]
+layout_mode = 2
 
 [connection signal="file_selected" from="Control/FileDialog" to="Control" method="_on_file_dialog_file_selected"]
 [connection signal="pressed" from="Control/VBoxContainer/Button" to="Control" method="_on_button_pressed"]

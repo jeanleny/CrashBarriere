@@ -10,6 +10,4 @@ file_mode = 3
 display_mode = 1
 access = 2
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1886894235]
-
 [connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

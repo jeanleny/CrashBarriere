@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cnx2hmgbkltef"]
+
+[ext_resource type="Script" uid="uid://n3ltnq8d8cbx" path="res://Script/Interface/potard.gd" id="1_svv7o"]
+[ext_resource type="Texture2D" uid="uid://xptkds61fwl2" path="res://Asset/MixingTAble/potard.png" id="2_svv7o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_svv7o"]
+radius = 172.14238
+
+[node name="Potard" type="Area2D" unique_id=1327196011]
+rotation = 1.5707964
+script = ExtResource("1_svv7o")
+
+[node name="Potar" type="Sprite2D" parent="." unique_id=1720642460]
+texture = ExtResource("2_svv7o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1893106716]
+shape = SubResource("CircleShape2D_svv7o")
+
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
