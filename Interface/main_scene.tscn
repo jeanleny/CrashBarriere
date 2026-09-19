@@ -32,5 +32,4 @@ busIndex = 1
 
 [node name="MixingAudio" type="AudioStreamPlayer" parent="." unique_id=603930733]
 stream = ExtResource("3_nkdx5")
-stream_paused = true
 bus = &"MixBus"

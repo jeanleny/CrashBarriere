@@ -1,7 +1,7 @@
 extends Node
 
 @onready var fDialog: FileDialog = $"."
-@onready var audioPlayer: AudioStreamPlayer = $"../../AudioPlayer"
+@onready var audioPlayer: AudioStreamPlayer = $"../../../MixingAudio"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
