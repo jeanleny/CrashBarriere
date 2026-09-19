@@ -1,11 +1,9 @@
-extends Node
-
+extends Control
 @onready var fDialog: FileDialog = $FileDialog
-@onready var audioPlayer: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var tunePlayer: AudioStreamPlayer = $"../../MixingAudio"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	fDialog.root_subfolder = "/"
 	pass # Replace with function body.
 
 
@@ -14,8 +12,20 @@ func _process(delta: float) -> void:
 	pass
 
 
+func _on_button_pressed() -> void:
+	print(fDialog)
+	fDialog.visible = true
+	pass # Replace with function body.
+
+
+func _on_play_pressed() -> void:
+	print(tunePlayer)
+	tunePlayer.play(0)
+	pass # Replace with function body.
+
+
 func _on_file_dialog_file_selected(path: String) -> void:
 	var newAudio:AudioStreamMP3 = AudioStreamMP3.load_from_file(path)
-	audioPlayer.stream = newAudio
-	audioPlayer.play(0)
+	tunePlayer.stream = newAudio
+	print(tunePlayer)
 	pass # Replace with function body.

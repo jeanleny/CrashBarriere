@@ -1,19 +1,13 @@
 [gd_scene format=3 uid="uid://bwkxojti0p5m8"]
 
-[ext_resource type="Script" uid="uid://n5vl8qn8gkrs" path="res://music_upload.gd" id="1_iwcqf"]
-
-[node name="Node" type="Node" unique_id=1575516208]
-script = ExtResource("1_iwcqf")
+[node name="AudioUploader" type="CanvasLayer" unique_id=942530349]
 
 [node name="FileDialog" type="FileDialog" parent="." unique_id=95163337]
 oversampling_override = 1.0
 title = "Open a File or Directory"
 initial_position = 2
-visible = true
 file_mode = 3
 display_mode = 1
 access = 2
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1886894235]
 
 [connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
