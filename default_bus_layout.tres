@@ -2,26 +2,13 @@
 
 [sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
 resource_name = "LowPassFilter"
-cutoff_hz = 200.0
+cutoff_hz = 20500.0
 resonance = 1.0
 db = 3
 
-[sub_resource type="AudioEffectLowShelfFilter" id="AudioEffectLowShelfFilter_j3pel"]
-resource_name = "LowShelfFilter"
-cutoff_hz = 20500.0
-resonance = 0.3
-gain = 1.19
-
 [sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_j3pel"]
 resource_name = "HighPassFilter"
-cutoff_hz = 300.0
-resonance = 1.0
-
-[sub_resource type="AudioEffectHighShelfFilter" id="AudioEffectHighShelfFilter_j3pel"]
-resource_name = "HighShelfFilter"
-cutoff_hz = 10143.0
-resonance = 0.0
-gain = 1.96
+cutoff_hz = 10.0
 
 [resource]
 bus/0/volume_db = -0.7237711
@@ -44,10 +31,6 @@ bus/3/bypass_fx = false
 bus/3/volume_db = 0.0
 bus/3/send = &"Bass"
 bus/3/effect/0/effect = SubResource("AudioEffectLowPassFilter_j3pel")
-bus/3/effect/0/enabled = false
-bus/3/effect/1/effect = SubResource("AudioEffectLowShelfFilter_j3pel")
-bus/3/effect/1/enabled = false
-bus/3/effect/2/effect = SubResource("AudioEffectHighPassFilter_j3pel")
-bus/3/effect/2/enabled = false
-bus/3/effect/3/effect = SubResource("AudioEffectHighShelfFilter_j3pel")
-bus/3/effect/3/enabled = false
+bus/3/effect/0/enabled = true
+bus/3/effect/1/effect = SubResource("AudioEffectHighPassFilter_j3pel")
+bus/3/effect/1/enabled = true

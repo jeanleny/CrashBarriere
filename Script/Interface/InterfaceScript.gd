@@ -1,6 +1,6 @@
 extends Control
 @onready var fDialog: FileDialog = $FileDialog
-@onready var tunePlayer: AudioStreamPlayer = $"../AudioPlayer"
+@onready var tunePlayer: AudioStreamPlayer = $"../../MixingAudio"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
